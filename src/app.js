@@ -10,10 +10,8 @@ const authRoutes = require('./routes/auth.routes');
 // Middleware
 app.use(expresss.json());
 
-console.log(authRoutes);
-
 // Routes
-app.post('/api/auth', authRoutes);
+app.use('/api/auth', authRoutes);
 app.get('/', (req, res) => {
     res.send('Welcome to the authentication API');
 });
